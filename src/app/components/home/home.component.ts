@@ -69,14 +69,14 @@ export class HomeComponent implements OnInit {
     this.ngxService.start();
     const model = this.prepareSave();
     model.UserId = 1;
-    model.Id = this.selcorrespondece.Id;
+    model.Id = 0;
     this.correspondeceService.insert(model)
     .pipe(finalize(() => this.ngxService.stop()))
     .subscribe(response => {
       if (response["IsSuccess"]){        
         this.displayModal = false; 
         this.getCorrespondenceByUserId();
-        this.general.showSuccess('registrado exitosamente');        
+        this.general.showSuccess('registrado exitosamente');
       } else {
         this.general.showError(`Ha ocurrido un error inesperado: ${response["Message"]}`);
       }
