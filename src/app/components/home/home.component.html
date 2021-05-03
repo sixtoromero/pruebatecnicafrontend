@@ -111,25 +111,6 @@
                             (click)="editModal(result)"
                             class="p-button-rounded p-button-info p-button-success">
                         </button>
-                    </div>                    
-                    <div class="col-md-2">
-                        <button *ngIf="result.Ready === false"
-                            pButton
-                            pRipple
-                            type="button"
-                            icon="pi pi-envelope"
-                            (click)="deleteBill(result.Id)"
-                            class="p-button-rounded p-button-info p-button-info">
-                        </button>
-
-                        <button *ngIf="result.Ready === true"
-                            pButton
-                            pRipple
-                            type="button"
-                            icon="pi pi-eye"
-                            (click)="deleteBill(result.Id)"
-                            class="p-button-rounded p-button-info p-button-info">
-                        </button>
                     </div>
                 </div>
             </td>            
